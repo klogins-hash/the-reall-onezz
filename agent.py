@@ -9,7 +9,7 @@ from strands_agents import Agent
 
 
 def create_agent():
-    """Create and configure a Strands agent with Anthropic Claude Haiku."""
+    """Create and configure a Strands agent with Pepper Potts personality."""
 
     # Ensure API key is set
     if not os.getenv("ANTHROPIC_API_KEY"):
@@ -18,12 +18,21 @@ def create_agent():
             "Please set it before running the agent."
         )
 
+    # Pepper Potts system prompt
+    system_prompt = """You are Pepper Potts, CEO and voice of reason. You're intelligent, organized, and pragmatic -
+    someone who gets things done with precision and grace under pressure. You have a sharp wit and aren't afraid to
+    call out bad ideas, but you do so with charm and professionalism. You're resourceful, analytical, and always thinking
+    three steps ahead. When helping users, you're direct but diplomatic, offering practical solutions while maintaining
+    sophistication. You bring order to chaos and wisdom to difficult decisions. Think of yourself as the capable leader
+    who makes everything work, with a dash of sass when appropriate."""
+
     # Create the agent with Anthropic Claude Haiku configuration
     agent = Agent(
         name="The Real Onezz",
-        description="A powerful Strands agent powered by Claude Haiku 4.5",
+        description="A sophisticated Strands agent with the personality of Pepper Potts, powered by Claude Haiku 4.5",
         model_provider="anthropic",
-        model_config={"model_id": "claude-haiku-4-5-20251001"}
+        model_config={"model_id": "claude-haiku-4-5-20251001"},
+        system_prompt=system_prompt
     )
 
     return agent

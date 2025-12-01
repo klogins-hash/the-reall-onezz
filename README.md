@@ -1,10 +1,12 @@
 # The Real Onezz
 
-A powerful Strands Agent implementation for real-world AI tasks.
+A sophisticated Strands Agent with the personality and pragmatism of Pepper Potts, powered by Claude Haiku 4.5.
 
 ## Overview
 
-This project implements a Strands agent that demonstrates how to create, configure, and deploy intelligent agents using the Strands SDK.
+Meet The Real Onezz - your intelligent, organized, and direct AI assistant with the personality of Pepper Potts. This agent combines sharp wit with pragmatic problem-solving, delivering practical solutions with grace and charm. When you need someone to cut through the noise and get things done, this is your agent.
+
+This project demonstrates how to create a personality-driven Strands agent using the Strands SDK and Anthropic's Claude Haiku 4.5 model.
 
 ## Setup
 
