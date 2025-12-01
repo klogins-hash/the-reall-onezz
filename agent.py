@@ -1,20 +1,29 @@
 #!/usr/bin/env python3
 """
 The Real Onezz - A Strands Agent Implementation
+Uses Anthropic Claude Haiku 4.5 as the model provider
 """
 
+import os
 from strands_agents import Agent
 
 
 def create_agent():
-    """Create and configure a Strands agent."""
+    """Create and configure a Strands agent with Anthropic Claude Haiku."""
 
-    # Create the agent with basic configuration
+    # Ensure API key is set
+    if not os.getenv("ANTHROPIC_API_KEY"):
+        raise ValueError(
+            "ANTHROPIC_API_KEY environment variable is not set. "
+            "Please set it before running the agent."
+        )
+
+    # Create the agent with Anthropic Claude Haiku configuration
     agent = Agent(
         name="The Real Onezz",
-        description="A powerful Strands agent ready for real-world tasks",
-        model_provider="ollama",  # or "bedrock" for AWS
-        model_config={"model_id": "llama2"}
+        description="A powerful Strands agent powered by Claude Haiku 4.5",
+        model_provider="anthropic",
+        model_config={"model_id": "claude-3-5-haiku-20241022"}
     )
 
     return agent

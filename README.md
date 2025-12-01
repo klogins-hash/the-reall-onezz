@@ -44,18 +44,22 @@ python agent.py
 
 ### Model Provider
 
-The agent can use different model providers:
-
-- **Ollama** (Local): Default configuration uses Ollama with Llama2
-- **AWS Bedrock**: Configure with `model_provider="bedrock"`
+This agent uses **Anthropic Claude Haiku 3.5** (claude-3-5-haiku-20241022) as the default model provider.
 
 ### Environment Variables
 
-Create a `.env` file to configure:
+Before running the agent, set your Anthropic API key:
+
+```bash
+export ANTHROPIC_API_KEY="your-api-key-here"
 ```
-STRANDS_MODEL_PROVIDER=ollama
-STRANDS_MODEL_ID=llama2
+
+Or create a `.env` file:
 ```
+ANTHROPIC_API_KEY=your-api-key-here
+```
+
+You can obtain an API key from [Anthropic Console](https://console.anthropic.com)
 
 ## Project Structure
 
