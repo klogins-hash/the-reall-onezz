@@ -44,7 +44,7 @@ python agent.py
 
 ### Model Provider
 
-This agent uses **Anthropic Claude Haiku 3.5** (claude-3-5-haiku-20241022) as the default model provider.
+This agent uses **Anthropic Claude Haiku 4.5** (claude-haiku-4-5-20251001) as the default model provider - the latest available Claude Haiku model.
 
 ### Environment Variables
 

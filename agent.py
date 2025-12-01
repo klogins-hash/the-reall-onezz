@@ -23,7 +23,7 @@ def create_agent():
         name="The Real Onezz",
         description="A powerful Strands agent powered by Claude Haiku 4.5",
         model_provider="anthropic",
-        model_config={"model_id": "claude-3-5-haiku-20241022"}
+        model_config={"model_id": "claude-haiku-4-5-20251001"}
     )
 
     return agent
